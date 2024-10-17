@@ -1,0 +1,201 @@
+body {
+    background-color: #1c1c1c; /* Dark background for a professional look */
+    color: #e0e0e0; /* Light text for contrast */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    margin: 0; /* Reset default margin */
+}
+
+/* Header Styles */
+header {
+    background-color: #1a1a1a; /* Dark header background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #007bff; /* Blue border for separation */
+}
+
+header h1 {
+    color: #007bff; /* Blue color for title */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e0e0e0; /* Light color for links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #007bff; /* Blue color on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Main content padding */
+}
+
+.featured-article, .latest-news {
+    display: grid;
+    gap: 20px;
+}
+
+/* Article Layout */
+.article-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Main content takes 3 parts, sidebar takes 1 part */
+    gap: 20px;
+    max-width: 900px; /* Set a max width for the article content */
+    margin: 0 auto;   /* Center the article content */
+    padding: 20px;    /* Add some padding */
+}
+
+/* Ensure all sections and video stay on the left */
+.article-content section,
+.article-content iframe {
+    grid-column: 1 / 2; /* Ensures content stays in the left column */
+}
+
+/* Center video within the left column */
+.article-content iframe {
+    width: 100%;
+    height: 450px;
+    max-width: 800px;  /* Optional: limit maximum width */
+    margin: 20px auto; /* Center the video */
+    display: block;     /* Make sure it's treated like a block element */
+}
+
+.sidebar {
+    grid-column: 2 / 3; /* Sidebar stays in the right column */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Advertisement styles */
+.advertisement {
+    padding: 10px;
+    background-color: #2a2a2a; /* Darker background for ads */
+    border: 1px solid #007bff; /* Blue border */
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a; /* Dark footer background */
+    color: #e0e0e0; /* Light text for footer */
+    border-top: 2px solid #007bff; /* Blue border for separation */
+}
+.photo-gallery {
+    display: flex;
+    flex-direction: column; /* Stack the images vertically */
+    align-items: center; /* Center align images and controls */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.photo {
+    display: none; /* Hide all images initially */
+    max-width: 100%; /* Ensure images are responsive */
+    border: 2px solid #007bff; /* Blue border around images */
+    margin-bottom: 20px; /* Space between images */
+}
+
+.photo.active {
+    display: block; /* Show the active image */
+}
+
+.gallery.controls {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Space above controls */
+}
+
+button {
+    padding: 10px 15px; /* Add padding to buttons */
+    background-color: #007bff; /* Blue background for buttons */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #fff; /* White links */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #444; /* Light border above footer bottom */
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+    nav ul.active {
+        display: flex;
+    }
+}
